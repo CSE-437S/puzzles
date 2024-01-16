@@ -1,3 +1,4 @@
+
 # Read file
 with open("input.txt") as f:
     lines = f.readlines()
@@ -10,28 +11,33 @@ for line in lines:
     you.append(line[1].strip())
 
 
+# I'm sorry for the butt ugly code
+
 score = 0
+win = 6
+tie = 3
+loss = 0
 for i in range(0, len(opponent)):
     if opponent[i] == "A":
         if you[i] == "X":
-            score += 4
+            score += loss + 3
         elif you[i] == "Y":
-            score += 8
+            score += tie + 1
         else:
-            score += 3
+            score += win + 2
     elif opponent[i] == "B":
         if you[i] == "X":
-            score += 1
+            score += loss + 1
         elif you[i] == "Y":
-            score += 5
+            score += tie + 2
         else:
-            score += 9
+            score += win + 3
     elif opponent[i] == "C":
         if you[i] == "X":
-            score += 7
+            score += loss + 2
         elif you[i] == "Y":
-            score += 2
+            score += tie + 3
         else:
-            score += 6
+            score += win + 1
 
 print(score)
