@@ -11,6 +11,7 @@ public class solution {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
         int sum = 0;
+    
 
       while (( st = br.readLine()) != null){
         char opp_move = st.charAt(0);
@@ -60,9 +61,11 @@ public class solution {
                     sum = sum + 3 + 3;
                 }
                 break;
+                
         }
 
       }
       System.out.println("Total is: " + sum);
     }
 }
+
