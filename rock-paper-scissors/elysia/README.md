@@ -1,0 +1,1 @@
+code can be run by creating an input txt file and with the command python solution.py <inputfilename>
