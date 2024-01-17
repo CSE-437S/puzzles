@@ -32,6 +32,7 @@ def counter(theirList, yourList):
     for i in range(len(theirList)):
         theirMove = theirList[i]
         yourMove = yourList[i]
+        # print(theirMove, yourMove)
         if yourMove == 'X':
             sum+=1
         elif yourMove == 'Y':
