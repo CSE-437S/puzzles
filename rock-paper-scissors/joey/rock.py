@@ -14,6 +14,8 @@ def main():
 
 def counter(theirList, yourList):
     sum = 0
+    theirMove = ''
+    yourMove = ''
     shapeScores = {
         'X':1,
         'Y':2,
@@ -25,7 +27,21 @@ def counter(theirList, yourList):
     C Z
     '''
     if theirMove == 'A':
-    
+        if yourMove == 'Y':
+            sum+=6
+        elif yourMove == 'A':
+            sum+=3
+    elif theirMove == 'B':
+        if yourMove == 'X':
+            sum+=6
+        elif yourMove == 'B':
+            sum+=3
+    elif theirMove == 'C':
+        if yourMove == 'Z':
+            sum+=6
+        elif yourMove == 'C':
+            sum+=3
+
     print(sum)
 
 main()
