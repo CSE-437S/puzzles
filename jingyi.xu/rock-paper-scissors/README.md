@@ -10,4 +10,4 @@ To run the solution, follow these steps:
 3. Run the compiled class file:
    java RockPaperScissors
 
-It works for the example but doesn't work with the test data. 
+It works for the example but doesn't work with the test data.  
