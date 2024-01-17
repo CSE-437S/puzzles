@@ -9,5 +9,3 @@ To run the solution, follow these steps:
    javac RockPaperScissors.java
 3. Run the compiled class file:
    java RockPaperScissors
-
-It works for the example but doesn't work with the test data.  

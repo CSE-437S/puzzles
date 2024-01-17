@@ -15,24 +15,32 @@ public class RockPaperScissors {
     }
 
     private static int calculateRoundScore(String round) {
-        Map<Character, Integer> moveScores = Map.of('X', 1, 'Y', 2, 'Z', 3);
-        Map<Character, Character> winningMoves = Map.of('C', 'X', 'A', 'Y', 'B', 'Z');
-
         char opponentMove = round.charAt(0);
         char yourResponse = round.charAt(2);
 
-        int moveScore = moveScores.get(yourResponse);
-        int outcomeScore = 0;
+        Shape opponentShape = Shape.fromChar(opponentMove);
+        Shape yourShape = Shape.fromChar(yourResponse);
 
-        if (winningMoves.get(opponentMove) == yourResponse) {
-            outcomeScore = 6; // Win
-        } else if (opponentMove == convertResponseToMove(yourResponse)) {
-            outcomeScore = 0; // Loss
-        } else {
-            outcomeScore = 3; // Draw
+        boolean win = didWin(yourShape, opponentShape);
+        boolean draw = yourShape == opponentShape;
+
+        return calculatePoints(win, draw, yourShape);
+    }
+
+    private static int calculatePoints(boolean win, boolean draw, Shape shape) {
+        int score = shape.getScore();
+        if (win) {
+            score += 6;
+        } else if (draw) {
+            score += 3;
         }
+        return score;
+    }
 
-        return moveScore + outcomeScore;
+    private static boolean didWin(Shape yourShape, Shape opponentShape) {
+        return (yourShape == Shape.Rock && opponentShape == Shape.Scissors) ||
+               (yourShape == Shape.Paper && opponentShape == Shape.Rock) ||
+               (yourShape == Shape.Scissors && opponentShape == Shape.Paper);
     }
 
     private static char convertResponseToMove(char response) {
@@ -41,6 +49,36 @@ public class RockPaperScissors {
             case 'Y': return 'B';
             case 'Z': return 'C';
             default:  return ' ';
+        }
+    }
+
+    private enum Shape {
+        Rock(1), Paper(2), Scissors(3);
+
+        private final int score;
+
+        Shape(int score) {
+            this.score = score;
+        }
+
+        public int getScore() {
+            return this.score;
+        }
+
+        public static Shape fromChar(char c) {
+            switch (c) {
+                case 'A':
+                case 'X':
+                    return Rock;
+                case 'B':
+                case 'Y':
+                    return Paper;
+                case 'C':
+                case 'Z':
+                    return Scissors;
+                default:
+                    throw new IllegalArgumentException("Invalid character for shape: " + c);
+            }
         }
     }
 }
