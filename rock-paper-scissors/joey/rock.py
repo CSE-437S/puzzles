@@ -11,14 +11,14 @@ def main():
         theirList.append(theirMove)
         yourList.append(yourMove)
 
-    print(theirList)
-    print(yourList)
+    # print(theirList)
+    # print(yourList)
     counter(theirList, yourList)
 
 def counter(theirList, yourList):
     sum = 0
-    theirMove = ''
-    yourMove = ''
+    # theirMove = ''
+    # yourMove = ''
     shapeScores = {
         'X':1,
         'Y':2,
@@ -55,5 +55,5 @@ def counter(theirList, yourList):
             elif yourMove == 'C':
                 sum+=3
     print(sum)
-    
+
 main()
