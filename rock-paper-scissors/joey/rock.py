@@ -30,7 +30,7 @@ def counter(theirList, yourList):
         theirMove = theirList[i]
         yourMove = yourList[i]
         if yourMove == 'X':
-        sum+=1
+            sum+=1
         elif yourMove == 'Y':
             sum+=2
         elif yourMove == 'Z':
