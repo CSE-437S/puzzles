@@ -7,9 +7,12 @@ def main():
     yourMove = ''
     for line in input:
         theirMove = line[0]
-        yourMove = line[1]
+        yourMove = line[2]
         theirList.append(theirMove)
         yourList.append(yourMove)
+
+    print(theirList)
+    print(yourList)
     counter(theirList, yourList)
 
 def counter(theirList, yourList):
@@ -51,9 +54,6 @@ def counter(theirList, yourList):
                 sum+=6
             elif yourMove == 'C':
                 sum+=3
-
-    
-
     print(sum)
-
+    
 main()
