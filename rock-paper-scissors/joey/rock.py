@@ -26,6 +26,10 @@ def counter(theirList, yourList):
     B X
     C Z
     '''
+    for i in range(len(theirList)):
+        print(i)
+
+
     if yourMove == 'X':
         sum+=1
     elif yourMove == 'Y':
