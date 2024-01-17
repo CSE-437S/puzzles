@@ -26,6 +26,13 @@ def counter(theirList, yourList):
     B X
     C Z
     '''
+    if yourMove == 'X':
+        sum+=1
+    elif yourMove == 'Y':
+        sum+=2
+    elif yourMove == 'Z':
+        sum+=3
+
     if theirMove == 'A':
         if yourMove == 'Y':
             sum+=6
