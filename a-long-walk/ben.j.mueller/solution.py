@@ -1,3 +1,7 @@
+# MY THINKING:
+# If I had more time, I would get the bfs to work correctly (not sure what is going wrong right now, think its just because I was rushing the implementation)
+# Then I would try and change to using dynamic programming to avoid exponential runtime
+
 
 # it just wants to find out how many steps, not to retrace the path
 # therefore, we can do a bfs 
