@@ -6,6 +6,11 @@ To run this code, create a text file called "input.txt" in the same directory as
 
 Make sure you are in the v.vinay directory
 
-Run the command below to run the code, and the answer will be printed to the console
+Run the commands below to run the code, and the answer will be printed to the console
 
-`python3 rps.py input.txt`
+Part 1:
+
+`python3 rps.py 1`
+
+Part 2:
+`python3 rps.py 2`
