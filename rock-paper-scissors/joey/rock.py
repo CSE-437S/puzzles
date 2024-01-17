@@ -27,31 +27,32 @@ def counter(theirList, yourList):
     C Z
     '''
     for i in range(len(theirList)):
-        print(i)
-
-
-    if yourMove == 'X':
-        sum+=1
-    elif yourMove == 'Y':
-        sum+=2
-    elif yourMove == 'Z':
-        sum+=3
-
-    if theirMove == 'A':
-        if yourMove == 'Y':
-            sum+=6
-        elif yourMove == 'A':
-            sum+=3
-    elif theirMove == 'B':
+        theirMove = theirList[i]
+        yourMove = yourList[i]
         if yourMove == 'X':
-            sum+=6
-        elif yourMove == 'B':
+        sum+=1
+        elif yourMove == 'Y':
+            sum+=2
+        elif yourMove == 'Z':
             sum+=3
-    elif theirMove == 'C':
-        if yourMove == 'Z':
-            sum+=6
-        elif yourMove == 'C':
-            sum+=3
+
+        if theirMove == 'A':
+            if yourMove == 'Y':
+                sum+=6
+            elif yourMove == 'A':
+                sum+=3
+        elif theirMove == 'B':
+            if yourMove == 'X':
+                sum+=6
+            elif yourMove == 'B':
+                sum+=3
+        elif theirMove == 'C':
+            if yourMove == 'Z':
+                sum+=6
+            elif yourMove == 'C':
+                sum+=3
+
+    
 
     print(sum)
 
