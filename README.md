@@ -1,3 +1,12 @@
+Sorry I couldn't add really anything to these problems - it's been a long time since I've looked at a leetcode challenge. I've taken CSE 330 and worked in tech the past couple of summers in product so I think I can be a more valuable group member than I've shown. 
+
+Thanks!
+
+Adam
+
+
+
+
 # Puzzles
 
 This repository contains 3 puzzles used for evaluating your general skill level. Each puzzle is in its own folder. The overall instructions are below.
