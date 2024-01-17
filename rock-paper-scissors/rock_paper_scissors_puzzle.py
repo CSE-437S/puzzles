@@ -1,16 +1,4 @@
-a = 1
-b = 2
-c = 3
-y = 1
-x = 2
-z = 3
 
-p1= 'a'
-p2=  'y'
-win = 6
-loss = 0
-tie = 3
-score = 0
 
 
 file1 = open('input.txt', 'r')
