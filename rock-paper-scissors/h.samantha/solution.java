@@ -5,7 +5,7 @@ public class solution {
 
     public static void main(String[] args) throws IOException {
         //please replace the pathname with your input below:
-        String pathname = "/Users/sammyhong/Documents/a-long-walk/a-long-walk/h.samantha/longwalkinput.txt";
+        String pathname = "/Users/sammyhong/Documents/a-long-walk/rock-paper-scissors/h.samantha/input.txt";
        
         File file = new File (pathname); 
         BufferedReader br = new BufferedReader(new FileReader(file));
