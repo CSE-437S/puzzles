@@ -1,0 +1,1 @@
+the code can be run as long as the inputs is turned into a string in python withoput formatting (ie: triple quotes)
